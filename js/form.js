@@ -7,7 +7,7 @@ function populateStorage() {
   var standInArray = [];
 
   // Check if localStorage isn't empty
-  if (localStorage.length != 0) {
+  if (localStorage.length) {
     // place localStorage content (strings) in standInArray then parse into finalArray (array)
     standInArray = localStorage.getItem("finalArray");
     finalArray = JSON.parse(standInArray);
@@ -21,6 +21,6 @@ function populateStorage() {
   // turn array into strings to place finalArray in localStorage
   localStorage.setItem("finalArray", JSON.stringify(finalArray));
   // Control code
-  // console.log(finalArray,localStorage);
+  console.log(finalArray,localStorage);
 
 }
