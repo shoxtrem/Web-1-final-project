@@ -3,8 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Display Page</title>
-  <link rel="stylesheet" href="css/w3.css">
+  <title>Directory</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,8 +14,8 @@
 <body>
 
   <!-- Navbar -->
-  <div class="w3-top">
-    <div class="w3-bar w3-blue w3-card w3-left-align w3-large">
+  <div class="top">
+    <div class="bar blue card left-align large">
       <ul>
         <li> <a href="index.html">Home</a></li>
         <li class="dropdown"> <a href="javascript:void(0)" class="dropbtn">Display</a>
@@ -26,33 +25,44 @@
           </div>
         </li>
         <li> <a href="form.html">Add</a></li>
-        <li> <a href="#">Link 4</a></li>
       </ul>
     </div>
   </div>
 
   <!-- Header -->
-  <header class="w3-container w3-blue w3-center" style="padding:128px 16px">
-    <h1 class="w3-margin w3-jumbo">START PAGE</h1>
-    <p class="w3-xlarge">Template by w3.css</p>
+  <header class="container blue center" style="padding:128px 16px">
+    <h1 class="margin jumbo">ADDITION PAGE</h1>
+    <p class="xlarge">Enter a name and lastname you wish to add</p>
   </header>
 
-    <form name="directoryForm" onsubmit="populateStorage()">
-      <div>
-        <label for="name">Name:</label>
-        <input type="text" required id="name" name="name">
-      </div>
-      <div>
-        <label for="lastname">Lastname:</label>
-        <input type="text" required id="lastname" name="lastname">
-      </div>
-      <div class="button">
+  <!-- Form with pattern to only allow text characters and spaces, prevent SQL injections-->
+  <form name="directoryForm" onsubmit="populateStorage()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" pattern="^[a-zA-Zàâçéèêëîïôûùüÿñæœ ]*$" required id="name" name="name">
+    </div>
+    <div>
+      <label for="lastname">Lastname:</label>
+      <input type="text" pattern="^[a-zA-Zàâçéèêëîïôûùüÿñæœ ]*$" required id="lastname" name="lastname">
+    </div>
+    <div class="button">
       <button type="submit" name="button">Submit</button>
     </div>
-    </form>
+  </form>
 
-    <script type="text/javascript" src="js/form.js">
-    </script>
+  <!-- Footer -->
+  <footer class="container padding-64 center opacity">
+    <div class="xlarge padding-32">
+      <i class="fa fa-facebook-official hover-opacity"></i>
+      <i class="fa fa-instagram hover-opacity"></i>
+      <i class="fa fa-snapchat hover-opacity"></i>
+      <i class="fa fa-pinterest-p hover-opacity"></i>
+      <i class="fa fa-twitter hover-opacity"></i>
+      <i class="fa fa-linkedin hover-opacity"></i>
+    </div>
+    <p>Modified for WebDev Project</p>
+  </footer>
 </body>
-
+<script type="text/javascript" src="js/form.js">
+</script>
 </html>

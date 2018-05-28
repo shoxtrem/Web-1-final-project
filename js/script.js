@@ -7,7 +7,7 @@ displayArray = JSON.parse(tempArray);
 
 if (tableParagraph) {
   var txt = "";
-  txt += "<table class='w3-table-all w3-table' border='1'>"
+  txt += "<table class='table-all table' border='1'>"
 
   for (x in displayArray) {
     txt += "<tr><td>" + displayArray[x].name + " " + displayArray[x].lastname + "</td></tr>";
@@ -26,7 +26,7 @@ if (tableParagraph) {
 function show(searchQuerry){
 // if (tableSearch) {
   var txt = "";
-  txt += "<table class='w3-table-all w3-table' border='1'>"
+  txt += "<table class='table-all table' border='1'>"
 
   for (x in displayArray) {
     if (displayArray[x].name + " " + displayArray[x].lastname == searchQuerry) {
