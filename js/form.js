@@ -21,6 +21,6 @@ function populateStorage() {
   // turn array into strings to place finalArray in localStorage
   localStorage.setItem("finalArray", JSON.stringify(finalArray));
   // Control code
-  console.log(finalArray,localStorage);
+  // console.log(finalArray,localStorage);
 
 }
